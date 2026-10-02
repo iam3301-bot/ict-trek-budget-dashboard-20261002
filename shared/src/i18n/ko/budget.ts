@@ -1,6 +1,16 @@
 import type { TranslationStrings } from '../types';
 
 const budget: TranslationStrings = {
+  'budgetDashboard.unpaid': "미지급 금액",
+  'budgetDashboard.title': "예산 대시보드",
+  'budgetDashboard.comparison': "예산과 실제 지급",
+  'budgetDashboard.recorded': "기록된 예산",
+  'budgetDashboard.paid': "실제 지급액",
+  'budgetDashboard.trend': "일별 지출",
+  'budgetDashboard.shareBasis': "비율은 양수인 지급 완료 비용을 기준으로 하며 환불은 별도로 표시합니다.",
+  'budgetDashboard.note': "예산은 기록된 비용 항목의 합계이며 별도의 지출 한도가 아닙니다. 미지급 항목은 실제 지급에 포함되지 않습니다.",
+  'budgetDashboard.refunds': "환불",
+
   'costs.confirm.deleteTitle': '지출을 삭제할까요?',
   'costs.confirm.deleteBody': '"{name}"이(가) 영구적으로 삭제됩니다.',
   'budget.title': '예산',

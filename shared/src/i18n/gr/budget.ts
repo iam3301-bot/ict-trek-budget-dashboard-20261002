@@ -1,6 +1,16 @@
 import type { TranslationStrings } from '../types';
 
 const budget: TranslationStrings = {
+  'budgetDashboard.unpaid': "Απλήρωτο ποσό",
+  'budgetDashboard.title': "Πίνακας προϋπολογισμού",
+  'budgetDashboard.comparison': "Προϋπολογισμός και πραγματικές πληρωμές",
+  'budgetDashboard.recorded': "Καταγεγραμμένος προϋπολογισμός",
+  'budgetDashboard.paid': "Πραγματικά πληρωμένο",
+  'budgetDashboard.trend': "Ημερήσιες δαπάνες",
+  'budgetDashboard.shareBasis': "Τα ποσοστά βασίζονται στις θετικές πληρωμένες δαπάνες· οι επιστροφές εμφανίζονται χωριστά.",
+  'budgetDashboard.note': "Ο προϋπολογισμός είναι το άθροισμα των καταγεγραμμένων δαπανών, όχι ανεξάρτητο όριο. Οι απλήρωτες εγγραφές δεν μετρούν ως πραγματικές πληρωμές.",
+  'budgetDashboard.refunds': "Επιστροφές",
+
   'costs.confirm.deleteTitle': 'Διαγραφή εξόδου;',
   'costs.confirm.deleteBody': 'Το "{name}" θα διαγραφεί οριστικά.',
   'budget.title': 'Προϋπολογισμός',

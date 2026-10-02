@@ -1,6 +1,16 @@
 import type { TranslationStrings } from '../types';
 
 const budget: TranslationStrings = {
+  'budgetDashboard.unpaid': "未払額",
+  'budgetDashboard.title': "予算ダッシュボード",
+  'budgetDashboard.comparison': "予算と実際の支払い",
+  'budgetDashboard.recorded': "記録済み予算",
+  'budgetDashboard.paid': "実際の支払額",
+  'budgetDashboard.trend': "日別支出",
+  'budgetDashboard.shareBasis': "割合は支払済みの正の費用から算出し、返金は別に表示します。",
+  'budgetDashboard.note': "予算は費用に記録された項目の合計で、独立した支出上限ではありません。未払い項目は実際の支払いに含まれません。",
+  'budgetDashboard.refunds': "返金",
+
   'costs.confirm.deleteTitle': 'この支出を削除しますか？',
   'costs.confirm.deleteBody': '「{name}」は完全に削除されます。',
   'budget.title': '予算',

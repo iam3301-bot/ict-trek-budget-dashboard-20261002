@@ -1,6 +1,16 @@
 import type { TranslationStrings } from '../types';
 
 const budget: TranslationStrings = {
+  'budgetDashboard.unpaid': "Несплачена сума",
+  'budgetDashboard.title': "Огляд бюджету",
+  'budgetDashboard.comparison': "Бюджет і фактичні платежі",
+  'budgetDashboard.recorded': "Записаний бюджет",
+  'budgetDashboard.paid': "Фактично сплачено",
+  'budgetDashboard.trend': "Щоденні витрати",
+  'budgetDashboard.shareBasis': "Частки обчислено за додатними сплаченими витратами; повернення показано окремо.",
+  'budgetDashboard.note': "Бюджет — сума записаних витрат, а не окремий ліміт. Несплачені записи не входять до фактичних платежів.",
+  'budgetDashboard.refunds': "Повернення",
+
   'costs.confirm.deleteTitle': 'Видалити витрату?',
   'costs.confirm.deleteBody': '«{name}» буде видалено безповоротно.',
   'budget.title': 'Бюджет',

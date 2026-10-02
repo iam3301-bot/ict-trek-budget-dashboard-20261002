@@ -1,6 +1,16 @@
 import type { TranslationStrings } from '../types';
 
 const budget: TranslationStrings = {
+  'budgetDashboard.unpaid': "待付款金額",
+  'budgetDashboard.title': "預算看板",
+  'budgetDashboard.comparison': "預算與實際付款",
+  'budgetDashboard.recorded': "已記錄預算",
+  'budgetDashboard.paid': "實際已付",
+  'budgetDashboard.trend': "每日支出趨勢",
+  'budgetDashboard.shareBasis': "占比依正向已付費用計算，退款另列。",
+  'budgetDashboard.note': "預算為費用模組中已記錄項目的總額，並非獨立支出上限；未付款項目不計入實際已付。",
+  'budgetDashboard.refunds': "退款",
+
   'costs.confirm.deleteTitle': '刪除這筆支出？',
   'costs.confirm.deleteBody': '「{name}」將被永久刪除。',
   'budget.title': '預算',

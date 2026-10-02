@@ -1,6 +1,16 @@
 import type { TranslationStrings } from '../types';
 
 const budget: TranslationStrings = {
+  'budgetDashboard.unpaid': "Jumlah belum dibayar",
+  'budgetDashboard.title': "Dasbor anggaran",
+  'budgetDashboard.comparison': "Anggaran dan pembayaran aktual",
+  'budgetDashboard.recorded': "Anggaran tercatat",
+  'budgetDashboard.paid': "Benar-benar dibayar",
+  'budgetDashboard.trend': "Pengeluaran harian",
+  'budgetDashboard.shareBasis': "Proporsi memakai biaya positif yang dibayar; pengembalian dana ditampilkan terpisah.",
+  'budgetDashboard.note': "Anggaran adalah jumlah catatan biaya, bukan batas pengeluaran terpisah. Catatan yang belum dibayar tidak termasuk pembayaran aktual.",
+  'budgetDashboard.refunds': "Pengembalian dana",
+
   'costs.confirm.deleteTitle': 'Hapus pengeluaran?',
   'costs.confirm.deleteBody': '"{name}" akan dihapus secara permanen.',
   'budget.title': 'Anggaran',

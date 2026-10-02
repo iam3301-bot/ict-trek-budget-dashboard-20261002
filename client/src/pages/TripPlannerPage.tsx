@@ -1016,10 +1016,10 @@ function TripPlannerPageDesktop(): React.ReactElement | null {
           </div>
         )}
 
-        {activeTab === 'finanzplan' && (
+        {(activeTab === 'finanzplan' || activeTab === 'budgetdashboard') && (
           <div style={{ height: '100%', overflowY: 'auto', overscrollBehavior: 'contain', width: '100%', paddingBottom: 'var(--bottom-nav-h)' }}>
-            <LazyPanel id="finanzplan">
-              <CostsPanel tripId={tripId} tripMembers={tripMembers} />
+            <LazyPanel id={activeTab}>
+              <CostsPanel tripId={tripId} tripMembers={tripMembers} dashboardOnly={activeTab === 'budgetdashboard'} />
             </LazyPanel>
           </div>
         )}

@@ -1,4 +1,4 @@
-import { Fragment, useState, useEffect, useMemo, useCallback } from 'react'
+import { Fragment, useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import { useSearchParams } from 'react-router'
 import { ArrowDown, ArrowUp, BarChart3, Plus, Search, ArrowRight, ArrowLeftRight, Check, RotateCcw, Pencil, Trash2, AlertCircle, Download, StickyNote, ChevronDown, Receipt, Paperclip } from 'lucide-react'
 import { useTripStore } from '../../store/tripStore'
@@ -29,9 +29,11 @@ import type { TripMember } from './BudgetPanelMemberChips'
 import GuestBadge from '../shared/GuestBadge'
 import { NumericInput } from '../shared/NumericInput'
 import EmptyState from '../shared/EmptyState'
+import BudgetDashboard from './BudgetDashboard'
 
 interface CostsPanelProps {
   tripId: number
+  dashboardOnly?: boolean
   tripMembers?: TripMember[]
 }
 
@@ -77,7 +79,7 @@ type LedgerEntry =
 const round2 = (n: number) => Math.round(n * 100) / 100
 const FIELD_H = 40 // shared height for the amount / currency / day row in the modal
 
-export default function CostsPanel({ tripId, tripMembers = [] }: CostsPanelProps) {
+export default function CostsPanel({ tripId, tripMembers = [], dashboardOnly = false }: CostsPanelProps) {
   const { trip, budgetItems, deleteBudgetItem, loadBudgetItems } = useTripStore()
   const me = useAuthStore(s => s.user?.id ?? -1)
   const can = useCanDo()
@@ -99,6 +101,7 @@ export default function CostsPanel({ tripId, tripMembers = [] }: CostsPanelProps
   // A failed settlement read leaves `settlement` null, which the empty views would
   // otherwise present as "everyone is square", a balance claim we cannot make.
   const [settlementError, setSettlementError] = useState(false)
+  const settlementRequest = useRef(0)
   const [filter, setFilter] = useState<'all' | 'mine' | 'owed'>('all')
   const [search, setSearch] = useState('')
   const [catFilter, setCatFilter] = useState('')   // '' = all categories
@@ -130,13 +133,19 @@ export default function CostsPanel({ tripId, tripMembers = [] }: CostsPanelProps
   // The browser's own figure for the display currency goes along, for the server to
   // answer in it when it cannot fetch a quote itself.
   const loadSettlement = useCallback(() => {
+    const request = ++settlementRequest.current
     budgetApi.settlement(tripId, base, base !== tripCurrency ? displayPerTrip : null)
-      .then(s => { setSettlement(s); setSettlementError(false) })
-      .catch(() => setSettlementError(true))
+      .then(s => { if (request === settlementRequest.current) { setSettlement(s); setSettlementError(false) } })
+      .catch(() => { if (request === settlementRequest.current) setSettlementError(true) })
   }, [tripId, base, tripCurrency, displayPerTrip])
 
-  useEffect(() => { loadBudgetItems(tripId); loadSettlement() }, [tripId])
-  useEffect(() => { loadSettlement() }, [budgetItems.length, loadSettlement])
+  useEffect(() => {
+    setSettlement(null)
+    setSettlementError(false)
+    loadBudgetItems(tripId)
+    return () => { settlementRequest.current++ }
+  }, [tripId])
+  useEffect(() => { loadSettlement() }, [budgetItems, loadSettlement])
 
   // Rows the server could not count get a rate frozen from the browser's, and the
   // settlement is read again once they count.
@@ -379,6 +388,14 @@ export default function CostsPanel({ tripId, tripMembers = [] }: CostsPanelProps
       <div className="text-content" style={{ fontSize: 'calc(26px * var(--fs-scale-title, 1))', fontWeight: 700, letterSpacing: '-0.02em', whiteSpace: 'nowrap' }}>{bigMoney(dayFilterTotal, 15, 'var(--text-muted)')}</div>
     </div>
   ) : null
+
+  if (dashboardOnly) return <BudgetDashboard items={budgetItems} booked={booked} fmt={fmt} members={
+    settlementError ? loadFailed() : !settlement ? <p role="status">{t('common.loading')}</p> : <>
+      {FinalBudgetList()}
+      <div className="mt-5">{BalancesList({ balances: settlement.balances })}</div>
+      <div className="mt-5">{SettleFlows()}</div>
+    </>
+  } />
 
   return (
     <div className="costs-root" style={{ minHeight: '100%', background: 'var(--c-bg)', padding: isMobile ? '6px 14px 28px' : '40px 24px 48px' }}>

@@ -1,6 +1,16 @@
 import type { TranslationStrings } from '../types';
 
 const budget: TranslationStrings = {
+  'budgetDashboard.unpaid': "待付款金额",
+  'budgetDashboard.title': "预算看板",
+  'budgetDashboard.comparison': "预算与实际付款",
+  'budgetDashboard.recorded': "已记录预算",
+  'budgetDashboard.paid': "实际已付",
+  'budgetDashboard.trend': "每日支出趋势",
+  'budgetDashboard.shareBasis': "占比按正向已付费用计算，退款单列。",
+  'budgetDashboard.note': "预算为费用模块中已记录条目的合计，并非独立的支出上限；未付款条目不计入实际已付。",
+  'budgetDashboard.refunds': "退款",
+
   'costs.confirm.deleteTitle': '删除这笔支出？',
   'costs.confirm.deleteBody': '"{name}"将被永久删除。',
   'budget.title': '预算',

@@ -1,6 +1,16 @@
 import type { TranslationStrings } from '../types';
 
 const budget: TranslationStrings = {
+  'budgetDashboard.unpaid': "Số tiền chưa trả",
+  'budgetDashboard.title': "Bảng ngân sách",
+  'budgetDashboard.comparison': "Ngân sách và thanh toán thực tế",
+  'budgetDashboard.recorded': "Ngân sách đã ghi",
+  'budgetDashboard.paid': "Đã thanh toán thực tế",
+  'budgetDashboard.trend': "Chi tiêu hằng ngày",
+  'budgetDashboard.shareBasis': "Tỷ lệ dựa trên chi phí dương đã trả; hoàn tiền được hiển thị riêng.",
+  'budgetDashboard.note': "Ngân sách là tổng các khoản chi phí đã ghi, không phải hạn mức riêng. Khoản chưa trả không được tính vào thanh toán thực tế.",
+  'budgetDashboard.refunds': "Hoàn tiền",
+
   'costs.confirm.deleteTitle': 'Xóa khoản chi?',
   'costs.confirm.deleteBody': '"{name}" sẽ bị xóa vĩnh viễn.',
   'budget.title': 'Ngân sách',

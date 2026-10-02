@@ -9,7 +9,7 @@ import { useSettingsStore } from '../../store/settingsStore'
 import { dayColor } from '../../components/Roadtrip/dayColors'
 import { getCached, fetchPhoto } from '../../services/photoService'
 import { useToast } from '../../components/shared/Toast'
-import { Map, Ticket, PackageCheck, Wallet, FolderOpen, Users, Train, Route } from 'lucide-react'
+import { Map, Ticket, PackageCheck, Wallet, BarChart3, FolderOpen, Users, Train, Route } from 'lucide-react'
 import { resolvePluginIcon } from '../../components/shared/PluginIcon'
 import { useTranslation, translateApiError } from '../../i18n'
 import { addonsApi, accommodationsApi, authApi, tripsApi, assignmentsApi, healthApi, airtrailApi, mapsApi, placesApi } from '../../api/client'
@@ -241,7 +241,10 @@ export function useTripPlanner() {
     // day plan, and a second entry point there would be a tab nobody needs.
     ...(enabledAddons.roadtrip && isMobile ? [{ id: 'roadtrip', label: t(TRIP_TAB_LABEL_KEYS.roadtrip), icon: Route }] : []),
     ...(enabledAddons.packing ? [{ id: 'listen', label: t(TRIP_TAB_LABEL_KEYS.listen), shortLabel: t('trip.tabs.listsShort'), icon: PackageCheck }] : []),
-    ...(enabledAddons.budget ? [{ id: 'finanzplan', label: t(TRIP_TAB_LABEL_KEYS.finanzplan), icon: Wallet }] : []),
+    ...(enabledAddons.budget ? [
+      { id: 'finanzplan', label: t(TRIP_TAB_LABEL_KEYS.finanzplan), icon: Wallet },
+      { id: 'budgetdashboard', label: t(TRIP_TAB_LABEL_KEYS.budgetdashboard), icon: BarChart3 },
+    ] : []),
     ...(enabledAddons.documents ? [{ id: 'dateien', label: t(TRIP_TAB_LABEL_KEYS.dateien), icon: FolderOpen }] : []),
     ...(enabledAddons.collab ? [{ id: 'collab', label: t(TRIP_TAB_LABEL_KEYS.collab), icon: Users }] : []),
   ].filter(tab => tab.id === 'plan' || !replacedTabs.has(tab.id))
@@ -284,7 +287,7 @@ export function useTripPlanner() {
     const tabId = replacedTabs.has(rawTabId) ? 'plan' : rawTabId
     setActiveTab(tabId)
     sessionStorage.setItem(`trip-tab-${tripId}`, tabId)
-    if (tabId === 'finanzplan') tripActions.loadBudgetItems?.(tripId)
+    if ((tabId === 'finanzplan' || tabId === 'budgetdashboard')) tripActions.loadBudgetItems?.(tripId)
     if (tabId === 'dateien' && (!files || files.length === 0)) tripActions.loadFiles?.(tripId)
   }
 
@@ -297,7 +300,7 @@ export function useTripPlanner() {
     if (!tripId || startTabSettled.current === tripId) return
     startTabSettled.current = tripId
     sessionStorage.setItem(`trip-tab-${tripId}`, activeTab)
-    if (activeTab === 'finanzplan') tripActions.loadBudgetItems?.(tripId)
+    if ((activeTab === 'finanzplan' || activeTab === 'budgetdashboard')) tripActions.loadBudgetItems?.(tripId)
     if (activeTab === 'dateien' && (!files || files.length === 0)) tripActions.loadFiles?.(tripId)
   }, [tripId])
   const {

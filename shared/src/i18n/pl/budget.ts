@@ -1,6 +1,16 @@
 import type { TranslationStrings } from '../types';
 
 const budget: TranslationStrings = {
+  'budgetDashboard.unpaid': "Nieopłacona kwota",
+  'budgetDashboard.title': "Panel budżetu",
+  'budgetDashboard.comparison': "Budżet i rzeczywiste płatności",
+  'budgetDashboard.recorded': "Zapisany budżet",
+  'budgetDashboard.paid': "Faktycznie zapłacono",
+  'budgetDashboard.trend': "Dzienne wydatki",
+  'budgetDashboard.shareBasis': "Udziały obejmują dodatnie opłacone wydatki; zwroty są pokazane osobno.",
+  'budgetDashboard.note': "Budżet to suma zapisanych kosztów, a nie osobny limit wydatków. Nieopłacone pozycje nie są rzeczywistymi płatnościami.",
+  'budgetDashboard.refunds': "Zwroty",
+
   'costs.confirm.deleteTitle': 'Usunąć wydatek?',
   'costs.confirm.deleteBody': '„{name}” zostanie trwale usunięte.',
   'budget.title': 'Budżet',

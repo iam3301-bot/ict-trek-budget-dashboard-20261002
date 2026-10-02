@@ -3,6 +3,7 @@ import { TabScroller } from './tabChrome'
 import MTransportsTab from './MTransportsTab'
 import MBookingsTab from './MBookingsTab'
 import MCostsTab from './MCostsTab'
+import CostsPanel from '../../../../components/Budget/CostsPanel'
 import MFilesTab from './MFilesTab'
 import MCollabTab from './MCollabTab'
 import MListsTab from './MListsTab'
@@ -48,6 +49,8 @@ export default function MTripTabPanel({ planner, shell, tab }: MTripTabPanelProp
       return <MTransportsTab planner={planner} shell={shell} />
     case 'buchungen':
       return <MBookingsTab planner={planner} shell={shell} />
+    case 'budgetdashboard':
+      return <TabScroller><CostsPanel tripId={planner.tripId} tripMembers={planner.tripMembers} dashboardOnly /></TabScroller>
     case 'finanzplan':
       return <MCostsTab planner={planner} shell={shell} />
     case 'dateien':

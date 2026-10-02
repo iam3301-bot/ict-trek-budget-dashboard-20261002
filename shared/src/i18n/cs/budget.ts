@@ -1,6 +1,16 @@
 import type { TranslationStrings } from '../types';
 
 const budget: TranslationStrings = {
+  'budgetDashboard.unpaid': "Nezaplacená částka",
+  'budgetDashboard.title': "Přehled rozpočtu",
+  'budgetDashboard.comparison': "Rozpočet a skutečné platby",
+  'budgetDashboard.recorded': "Zaznamenaný rozpočet",
+  'budgetDashboard.paid': "Skutečně zaplaceno",
+  'budgetDashboard.trend': "Denní výdaje",
+  'budgetDashboard.shareBasis': "Podíly vycházejí z kladných zaplacených výdajů; vratky jsou zobrazeny zvlášť.",
+  'budgetDashboard.note': "Rozpočet je součet zaznamenaných nákladů, nikoli samostatný limit. Nezaplacené položky se nezapočítávají do skutečných plateb.",
+  'budgetDashboard.refunds': "Vratky",
+
   'costs.confirm.deleteTitle': 'Smazat výdaj?',
   'costs.confirm.deleteBody': '„{name}“ bude trvale smazáno.',
   'budget.title': 'Rozpočet',

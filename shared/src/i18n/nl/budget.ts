@@ -1,6 +1,16 @@
 import type { TranslationStrings } from '../types';
 
 const budget: TranslationStrings = {
+  'budgetDashboard.unpaid': "Onbetaald bedrag",
+  'budgetDashboard.title': "Budgetoverzicht",
+  'budgetDashboard.comparison': "Budget en werkelijke betalingen",
+  'budgetDashboard.recorded': "Vastgelegd budget",
+  'budgetDashboard.paid': "Werkelijk betaald",
+  'budgetDashboard.trend': "Dagelijkse uitgaven",
+  'budgetDashboard.shareBasis': "Aandelen gebruiken positieve betaalde kosten; terugbetalingen staan apart.",
+  'budgetDashboard.note': "Het budget is de som van vastgelegde kosten, geen onafhankelijke bestedingslimiet. Onbetaalde posten tellen niet als werkelijke betalingen.",
+  'budgetDashboard.refunds': "Terugbetalingen",
+
   'costs.confirm.deleteTitle': 'Uitgave verwijderen?',
   'costs.confirm.deleteBody': '"{name}" wordt permanent verwijderd.',
   'budget.title': 'Budget',

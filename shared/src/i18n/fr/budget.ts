@@ -1,6 +1,16 @@
 import type { TranslationStrings } from '../types';
 
 const budget: TranslationStrings = {
+  'budgetDashboard.unpaid': "Montant impayé",
+  'budgetDashboard.title': "Tableau du budget",
+  'budgetDashboard.comparison': "Budget et paiements réels",
+  'budgetDashboard.recorded': "Budget enregistré",
+  'budgetDashboard.paid': "Montant réellement payé",
+  'budgetDashboard.trend': "Dépenses quotidiennes",
+  'budgetDashboard.shareBasis': "Les parts utilisent les dépenses positives payées ; les remboursements sont séparés.",
+  'budgetDashboard.note': "Le budget est la somme des frais enregistrés, pas un plafond indépendant. Les frais impayés sont exclus des paiements réels.",
+  'budgetDashboard.refunds': "Remboursements",
+
   'costs.confirm.deleteTitle': 'Supprimer la dépense ?',
   'costs.confirm.deleteBody': '« {name} » sera définitivement supprimé.',
   'budget.title': 'Budget',

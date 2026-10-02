@@ -1,6 +1,16 @@
 import type { TranslationStrings } from '../types';
 
 const budget: TranslationStrings = {
+  'budgetDashboard.unpaid': "Obetalt belopp",
+  'budgetDashboard.title': "Budgetöversikt",
+  'budgetDashboard.comparison': "Budget och faktiska betalningar",
+  'budgetDashboard.recorded': "Registrerad budget",
+  'budgetDashboard.paid': "Faktiskt betalt",
+  'budgetDashboard.trend': "Dagliga utgifter",
+  'budgetDashboard.shareBasis': "Andelar bygger på positiva betalda utgifter; återbetalningar visas separat.",
+  'budgetDashboard.note': "Budgeten är summan av registrerade kostnader, inte en separat utgiftsgräns. Obetalda poster räknas inte som faktiska betalningar.",
+  'budgetDashboard.refunds': "Återbetalningar",
+
   'costs.confirm.deleteTitle': 'Ta bort utgift?',
   'costs.confirm.deleteBody': '"{name}" tas bort permanent.',
   'budget.title': 'Budget',

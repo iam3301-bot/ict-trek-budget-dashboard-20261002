@@ -1,6 +1,16 @@
 import type { TranslationStrings } from '../types';
 
 const budget: TranslationStrings = {
+  'budgetDashboard.unpaid': "Ki nem fizetett összeg",
+  'budgetDashboard.title': "Költségvetési áttekintés",
+  'budgetDashboard.comparison': "Költségvetés és tényleges fizetések",
+  'budgetDashboard.recorded': "Rögzített költségvetés",
+  'budgetDashboard.paid': "Ténylegesen kifizetve",
+  'budgetDashboard.trend': "Napi kiadások",
+  'budgetDashboard.shareBasis': "Az arányok a pozitív, kifizetett költségeken alapulnak; a visszatérítések külön szerepelnek.",
+  'budgetDashboard.note': "A költségvetés a rögzített költségek összege, nem önálló kiadási korlát. A ki nem fizetett tételek nem számítanak tényleges fizetésnek.",
+  'budgetDashboard.refunds': "Visszatérítések",
+
   'costs.confirm.deleteTitle': 'Törlöd a kiadást?',
   'costs.confirm.deleteBody': 'A(z) „{name}” véglegesen törlődik.',
   'budget.title': 'Költségvetés',

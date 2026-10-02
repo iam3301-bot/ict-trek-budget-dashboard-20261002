@@ -1,6 +1,16 @@
 import type { TranslationStrings } from '../types';
 
 const budget: TranslationStrings = {
+  'budgetDashboard.unpaid': "المبلغ غير المدفوع",
+  'budgetDashboard.title': "لوحة الميزانية",
+  'budgetDashboard.comparison': "الميزانية والمدفوعات الفعلية",
+  'budgetDashboard.recorded': "الميزانية المسجلة",
+  'budgetDashboard.paid': "المدفوع فعليًا",
+  'budgetDashboard.trend': "النفقات اليومية",
+  'budgetDashboard.shareBasis': "تُحسب النسب من النفقات الموجبة المدفوعة؛ وتُعرض المبالغ المستردة منفصلة.",
+  'budgetDashboard.note': "الميزانية هي مجموع بنود النفقات المسجلة وليست سقفًا مستقلًا للإنفاق. لا تُحسب البنود غير المدفوعة ضمن المدفوعات الفعلية.",
+  'budgetDashboard.refunds': "المبالغ المستردة",
+
   'costs.confirm.deleteTitle': 'حذف المصروف؟',
   'costs.confirm.deleteBody': 'سيتم حذف "{name}" نهائيًا.',
   'budget.title': 'الميزانية',

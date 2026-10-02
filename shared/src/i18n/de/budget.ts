@@ -1,6 +1,16 @@
 import type { TranslationStrings } from '../types';
 
 const budget: TranslationStrings = {
+  'budgetDashboard.unpaid': "Unbezahlter Betrag",
+  'budgetDashboard.title': "Budgetübersicht",
+  'budgetDashboard.comparison': "Budget und tatsächliche Zahlungen",
+  'budgetDashboard.recorded': "Erfasstes Budget",
+  'budgetDashboard.paid': "Tatsächlich bezahlt",
+  'budgetDashboard.trend': "Tägliche Ausgaben",
+  'budgetDashboard.shareBasis': "Anteile basieren auf positiven bezahlten Ausgaben; Erstattungen werden separat gezeigt.",
+  'budgetDashboard.note': "Das Budget ist die Summe der erfassten Kosten, keine eigenständige Ausgabengrenze. Unbezahlte Einträge zählen nicht als Zahlungen.",
+  'budgetDashboard.refunds': "Erstattungen",
+
   'costs.confirm.deleteTitle': 'Ausgabe löschen?',
   'costs.confirm.deleteBody': '"{name}" wird unwiderruflich gelöscht.',
   'budget.title': 'Budget',

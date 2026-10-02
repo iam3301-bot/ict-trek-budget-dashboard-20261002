@@ -1,6 +1,16 @@
 import type { TranslationStrings } from '../types';
 
 const budget: TranslationStrings = {
+  'budgetDashboard.unpaid': "Importe sin pagar",
+  'budgetDashboard.title': "Panel de presupuesto",
+  'budgetDashboard.comparison': "Presupuesto y pagos reales",
+  'budgetDashboard.recorded': "Presupuesto registrado",
+  'budgetDashboard.paid': "Realmente pagado",
+  'budgetDashboard.trend': "Gastos diarios",
+  'budgetDashboard.shareBasis': "Los porcentajes usan gastos positivos pagados; los reembolsos se muestran aparte.",
+  'budgetDashboard.note': "El presupuesto suma las entradas de Gastos, no es un límite independiente. Las entradas sin pagar no cuentan como pagos reales.",
+  'budgetDashboard.refunds': "Reembolsos",
+
   'costs.confirm.deleteTitle': '¿Eliminar el gasto?',
   'costs.confirm.deleteBody': '"{name}" se eliminará permanentemente.',
   'budget.title': 'Presupuesto',

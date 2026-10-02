@@ -17,6 +17,7 @@ export const TRIP_TAB_IDS = [
   'buchungen',
   'listen',
   'finanzplan',
+  'budgetdashboard',
   'dateien',
   'collab',
 ] as const
@@ -36,6 +37,7 @@ export const TRIP_TAB_LABEL_KEYS: Record<TripTabId, string> = {
   buchungen: 'trip.tabs.reservations',
   listen: 'trip.tabs.lists',
   finanzplan: 'trip.tabs.budget',
+  budgetdashboard: 'budgetDashboard.title',
   dateien: 'trip.tabs.files',
   collab: 'admin.addons.catalog.collab.name',
 }

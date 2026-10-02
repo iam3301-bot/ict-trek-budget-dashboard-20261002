@@ -1,6 +1,16 @@
 import type { TranslationStrings } from '../types';
 
 const budget: TranslationStrings = {
+  'budgetDashboard.unpaid': "Ödenmemiş tutar",
+  'budgetDashboard.title': "Bütçe panosu",
+  'budgetDashboard.comparison': "Bütçe ve gerçek ödemeler",
+  'budgetDashboard.recorded': "Kaydedilen bütçe",
+  'budgetDashboard.paid': "Gerçekte ödenen",
+  'budgetDashboard.trend': "Günlük harcamalar",
+  'budgetDashboard.shareBasis': "Oranlar pozitif ödenmiş giderlere dayanır; iadeler ayrı gösterilir.",
+  'budgetDashboard.note': "Bütçe kayıtlı giderlerin toplamıdır, bağımsız bir harcama limiti değildir. Ödenmemiş kayıtlar gerçek ödemeye dahil edilmez.",
+  'budgetDashboard.refunds': "İadeler",
+
   'costs.confirm.deleteTitle': 'Gider silinsin mi?',
   'costs.confirm.deleteBody': '"{name}" kalıcı olarak silinecek.',
   'budget.title': 'Bütçe',

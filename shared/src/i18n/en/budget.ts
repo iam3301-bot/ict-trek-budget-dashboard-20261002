@@ -1,6 +1,16 @@
 import type { TranslationStrings } from '../types';
 
 const budget: TranslationStrings = {
+  'budgetDashboard.unpaid': "Unpaid amount",
+  'budgetDashboard.title': "Budget dashboard",
+  'budgetDashboard.comparison': "Budget and actual payments",
+  'budgetDashboard.recorded': "Recorded budget",
+  'budgetDashboard.paid': "Actually paid",
+  'budgetDashboard.trend': "Daily spending",
+  'budgetDashboard.shareBasis': "Shares use positive paid expenses; refunds are separate.",
+  'budgetDashboard.note': "Budget is the sum of recorded Costs entries, not an independent spending limit. Unpaid entries are excluded from actual payments.",
+  'budgetDashboard.refunds': "Refunds",
+
   'costs.confirm.deleteTitle': 'Delete expense?',
   'costs.confirm.deleteBody': '"{name}" will be permanently deleted.',
   'budget.title': 'Budget',

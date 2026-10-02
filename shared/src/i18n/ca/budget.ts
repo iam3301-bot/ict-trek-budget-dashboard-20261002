@@ -1,6 +1,16 @@
 import type { TranslationStrings } from '../types';
 
 const budget: TranslationStrings = {
+  'budgetDashboard.unpaid': "Import pendent de pagament",
+  'budgetDashboard.title': "Tauler del pressupost",
+  'budgetDashboard.comparison': "Pressupost i pagaments reals",
+  'budgetDashboard.recorded': "Pressupost registrat",
+  'budgetDashboard.paid': "Realment pagat",
+  'budgetDashboard.trend': "Despeses diàries",
+  'budgetDashboard.shareBasis': "Les proporcions utilitzen despeses positives pagades; els reemborsaments es mostren a part.",
+  'budgetDashboard.note': "El pressupost suma les despeses registrades, no és un límit independent. Les entrades sense pagar no compten com a pagaments reals.",
+  'budgetDashboard.refunds': "Reemborsaments",
+
   'budget.title': 'Pressupost',
   'budget.exportCsv': 'Exporta CSV',
   'budget.emptyTitle': "Encara no s'ha creat cap pressupost",
